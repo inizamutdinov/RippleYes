@@ -95,6 +95,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OS\WinPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,9 +145,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NinjectMaster\NinjectMaster.csproj">
+      <Project>{8f8ab894-66be-47bc-bd30-76c9c7d2a1bd}</Project>
+      <Name>NinjectMaster</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RippleYes\RippleYes.csproj">
       <Project>{F5C13975-0A04-4605-8956-C5362FB566CF}</Project>
       <Name>RippleYes</Name>

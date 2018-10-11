@@ -20,6 +20,7 @@ namespace RippleYes
         {
             var d = await "https://data.ripple.com/v2/accounts/rEhRJFYxGAd7JZZnVE7N6x8jsoRXW43dEd".GetStringAsync();
             text.Text = d;
+            
         }
     }
 }

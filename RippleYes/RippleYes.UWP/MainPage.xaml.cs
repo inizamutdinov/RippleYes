@@ -21,7 +21,7 @@ namespace RippleYes.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new RippleYes.App());
+            LoadApplication(new RippleYes.App(new WinPath()));
         }
     }
 }
