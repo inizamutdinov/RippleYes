@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RippleYes.Commands
+namespace RippleYes.MicroCommands
 {
     public class ConfigureNinjectCommand
     {
@@ -17,11 +17,13 @@ namespace RippleYes.Commands
 
         public void Execute()
         {
-            var settings = new Ninject.NinjectSettings() { LoadExtensions = false };
+            var settings = new NinjectSettings() { LoadExtensions = false };
+
             App.Kernel = new StandardKernel(settings);
             App.Kernel.Load(new RepositoryModule(DbPath));
-            App.Kernel.Bind<IStoryFile>().To<StoryFile>().InSingletonScope();
+            App.Kernel.Load(new BusinessLogicModule());
             App.Kernel.Bind<ISmartNavigator>().To<SmartNavigator>().InSingletonScope();
+            App.Kernel.Bind<IPageNavigator>().To<PageNavigator>().InSingletonScope();
         }
     }
 }

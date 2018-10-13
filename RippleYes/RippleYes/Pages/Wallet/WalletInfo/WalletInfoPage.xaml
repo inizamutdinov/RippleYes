@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RippleYes.Pages.WalletInfoPage"
+             Title="Wallet Info">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="OKItem" Order="Primary" Text="OK" Command="{Binding Path=OKCommand}" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <Label Text="{Binding Path=Address}"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="Center" 
+                   StyleClass="Body"/>
+
+            <Editor Text="{Binding Path=Info}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

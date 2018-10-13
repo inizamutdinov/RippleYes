@@ -3,7 +3,7 @@ using System;
 
 namespace IRepository
 {
-    public interface IConfigRepository : IKeyRepository<string, string>
+    public interface IStoryRepository : IKeyRepository<string, string>
     {
         bool Save(string key, string value);
     }

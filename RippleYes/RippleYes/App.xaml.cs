@@ -1,8 +1,9 @@
-﻿using IRepository;
+﻿using IBusinessLogic;
+using IRepository;
 using IRepository.Migrator;
 using Ninject;
 using NinjectMaster;
-using RippleYes.Commands;
+using RippleYes.MicroCommands;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -18,7 +19,7 @@ namespace RippleYes
             InitializeComponent();
 
             OSPath = osPath;
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         private readonly IOSPath OSPath;
@@ -29,7 +30,7 @@ namespace RippleYes
             // Handle when your app starts
             ConfigureNinject();
             Migrate();
-            Kernel.Get<ISmartNavigator>().CheckEmail(MainPage.Navigation, Kernel.Get<IStoryFile>());
+            Kernel.Get<ISmartNavigator>().ExistsPIN(MainPage.Navigation, Kernel.Get<IPageNavigator>(), Kernel.Get<IBLConfigFile>());
         }
 
         protected override void OnSleep()

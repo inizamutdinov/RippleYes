@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RippleYes.Pages.LoginPINPage">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+
+            <Label Text="Enter PIN"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="Start"
+                   StyleClass="Subheader"/>
+
+            <Entry x:Name="pinBox"
+                   Text="{Binding Path=PIN, Mode=TwoWay}"
+                   Placeholder="...."
+                   IsPassword="True"
+                   Keyboard="Numeric"
+                   VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Button Text="Forgot PIN"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="End"
+                    BackgroundColor="Transparent"
+                    Command="{Binding Path=ForgotPINCommand}"
+                    TextColor="LightGray"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

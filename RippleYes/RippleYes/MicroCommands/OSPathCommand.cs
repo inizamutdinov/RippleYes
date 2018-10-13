@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace RippleYes.Commands
+namespace RippleYes.MicroCommands
 {
     public class OSPathCommand
     {

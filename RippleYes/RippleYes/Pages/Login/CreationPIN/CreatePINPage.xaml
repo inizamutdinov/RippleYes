@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:RippleYes"
+             x:Class="RippleYes.Pages.CreatePINPage">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <Label Text="Create PIN"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="Start"
+                   StyleClass="Subheader"/>
+
+            <Entry Text="{Binding Path=PIN, Mode=TwoWay}"
+                   Placeholder="...."
+                   IsPassword="True"
+                   Keyboard="Numeric"
+                   VerticalOptions="Center"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Button Text="Next"
+                    Command="{Binding Path=NextCommand}"
+                    VerticalOptions="EndAndExpand"
+                    StyleClass="Success"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

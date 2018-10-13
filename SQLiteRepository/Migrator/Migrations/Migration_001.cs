@@ -18,7 +18,7 @@ namespace SQLiteRepository.Migrator
 
         protected override void Up()
         {
-            Execute("CREATE TABLE \"Configs\" ( \"Key\" TEXT NOT NULL CONSTRAINT \"PK_Configs\" PRIMARY KEY, \"Value\" TEXT NULL )");
+            Execute("CREATE TABLE \"Story\" ( \"Key\" TEXT NOT NULL CONSTRAINT \"PK_Configs\" PRIMARY KEY, \"Value\" TEXT NULL )");
         }
     }
 }

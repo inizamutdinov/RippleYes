@@ -13,7 +13,9 @@
     <PackageReference Include="Flurl" Version="2.8.0" />
     <PackageReference Include="Flurl.Http" Version="2.4.0" />
     <PackageReference Include="Ninject" Version="3.3.4" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
+    <PackageReference Include="Xamarin.Forms.Theme.Base" Version="1.0.0.43-pre1" />
+    <PackageReference Include="Xamarin.Forms.Theme.Light" Version="1.0.0.43-pre1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +23,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\InputEmailPage.xaml">
+    <Compile Update="Pages\Login\CreationPIN\CreatePINPage.xaml.cs">
+      <DependentUpon>CreatePINPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Wallet\AddWallet\AddWalletPage.xaml.cs">
+      <DependentUpon>AddWalletPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\Wallet\WalletInfo\WalletInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Wallet\AddWallet\AddWalletPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Login\Login\LoginPINPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Login\CreationPIN\CreatePINPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Wallet\Wallets\WalletsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

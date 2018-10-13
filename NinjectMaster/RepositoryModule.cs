@@ -19,7 +19,7 @@ namespace NinjectMaster
         public override void Load()
         {
             Bind<IMigrator>().ToMethod(p => new SqliteMigrator(DbPath)).InSingletonScope();
-            Bind<IConfigRepository>().ToMethod(p => new ConfigRepository(DbPath)).InSingletonScope();
+            Bind<IStoryRepository>().ToMethod(p => new StoryRepository(DbPath)).InSingletonScope();
         }
     }
 }

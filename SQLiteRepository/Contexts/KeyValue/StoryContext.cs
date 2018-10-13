@@ -5,14 +5,14 @@ using System.Text;
 
 namespace SQLiteRepository.Contexts
 {
-    public class ConfigContext : BaseContext
+    public class StoryContext : BaseContext
     {
-        public ConfigContext(string dbPath)
+        public StoryContext(string dbPath)
             : base(dbPath)
         {
             
         }
         
-        public DbSet<Config> Configs { get; set; }
+        public DbSet<StoryContextItem> Items { get; set; }
     }
 }
