@@ -24,7 +24,7 @@ namespace RippleYes.Pages
         {
             base.OnAppearing();
 
-            ((WalletInfoViewModel)BindingContext).LazeLoadWalletInfo();
+            ((WalletInfoViewModel)BindingContext).LazyLoadWalletInfo();
         }
     }
 }

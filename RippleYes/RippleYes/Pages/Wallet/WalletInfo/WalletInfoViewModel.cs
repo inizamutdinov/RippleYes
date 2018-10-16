@@ -25,7 +25,7 @@ namespace RippleYes.Pages.Wallet.WalletInfo
         }
         private string _info;
 
-        internal async void LazeLoadWalletInfo()
+        internal async void LazyLoadWalletInfo()
         {
             Info = await $"https://data.ripple.com/v2/accounts/{Address}".GetStringAsync();
         }
